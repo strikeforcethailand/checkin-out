@@ -135,7 +135,7 @@
     </div>
     <script>
         // ประกาศค่า URL ที่ใช้เชื่อมต่อกับ Web App
-        const WEB_MEMBER_APP_URL = ' '; 
+        const WEB_MEMBER_APP_URL = 'https://script.google.com/macros/s/AKfycbzOOkAtYpyVnjl8vjgE09btSZAHg33INH7MuSSbuRE1wSndA4LTgO7nS_B5TRwCZgt1og/exec'; 
         const WEB_APP_Leave_URL = ' '; 
         const LIFF_ID = ' '; // Liff ID
 
