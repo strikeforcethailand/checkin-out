@@ -403,19 +403,6 @@ async function showConfirmationDialog() {
                 console.error('เกิดข้อผิดพลาดในการเปิดกล้อง: ', err);
             });
     });
-
-	 // ฟังก์ชันสำหรับแสดงภาพที่ถ่าย
-        function handleFileSelect(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    document.getElementById("preview").src = e.target.result;
-                    document.getElementById("preview").style.display = "block";
-                };
-                reader.readAsDataURL(file);
-            }
-        }
 </script>
 </body>
 </html>
