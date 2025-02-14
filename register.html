@@ -27,7 +27,7 @@
                     <!-- ปุ่มสำหรับอัพโหลดรูปภาพ -->
                     <label for="file" class="cursor-pointer inline-flex justify-between items-center p-2 rounded-lg text-slate-800 bg-slate-100 hover:bg-slate-300">
                         อัพโหลดรูป
-                        <input type="file" id="file" name="file" accept="image/*" capture="environment" class="hidden">
+                               <input type="file" id="file" name="file" accept="image/*" capture="environment" class="hidden" onchange="handleFileSelect(event)">
                     </label>
                     <div class="mx-auto w-48 text-slate-500 text-xs text-center mt-1">คลิกเพื่ออัพโหลดรูปของคุณ</div>
                 </div>
@@ -403,6 +403,19 @@ async function showConfirmationDialog() {
                 console.error('เกิดข้อผิดพลาดในการเปิดกล้อง: ', err);
             });
     });
+
+	 // ฟังก์ชันสำหรับแสดงภาพที่ถ่าย
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById("preview").src = e.target.result;
+                    document.getElementById("preview").style.display = "block";
+                };
+                reader.readAsDataURL(file);
+            }
+        }
 </script>
 </body>
 </html>
