@@ -381,9 +381,9 @@ async function showConfirmationDialog() {
 
     return confirmation.isConfirmed;
 }
-</script>
-<script>
-    document.getElementById('file').addEventListener('click', function(event) {
+
+	//Test
+	document.getElementById('file').addEventListener('click', function(event) {
         event.preventDefault(); // ป้องกันการเปิดตัวเลือกไฟล์ปกติ
     
         // เปิดกล้องโดยใช้ getUserMedia API
@@ -403,6 +403,6 @@ async function showConfirmationDialog() {
                 console.error('เกิดข้อผิดพลาดในการเปิดกล้อง: ', err);
             });
     });
-    </script>
+</script>
 </body>
 </html>
